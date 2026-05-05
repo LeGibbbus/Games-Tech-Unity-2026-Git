@@ -23,5 +23,10 @@ public class Player_Manager : MonoBehaviour
         GameObject.
     }
 
+    void MovePlayer()
+    {
+
+    }
+
 
 }
