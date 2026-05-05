@@ -10,12 +10,14 @@ public class Player_Manager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        playerInputs.Player.Enable();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
+
+
 }
