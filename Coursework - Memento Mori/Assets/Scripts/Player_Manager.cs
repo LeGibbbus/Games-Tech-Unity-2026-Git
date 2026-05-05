@@ -1,5 +1,7 @@
+using UnityEditor.ShaderGraph;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.UIElements;
 
 public class Player_Manager : MonoBehaviour
 {
@@ -16,7 +18,7 @@ public class Player_Manager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        GameObject.
     }
 
 
