@@ -18,7 +18,6 @@ public class Player_Manager : MonoBehaviour
         body = GetComponent<Rigidbody2D>();
         playerInputs = new DefaultInputActions();
         moveAction = playerInputs.Player.Move;
-        Vector2 movementDirection = Vector2.zero;
 
     }
 
@@ -37,17 +36,7 @@ public class Player_Manager : MonoBehaviour
     //}
     void Update()
     {
-        if (moveAction.triggered)
-        {
-            Debug.Log("Moved");
-        }
-    }
 
-    void MovePlayer()
-    {
-        
-        Vector2 moveDirection = moveAction.ReadValue<Vector2>();
-        body.MovePosition(body.position + moveDirection * MoveSpeed *  Time.deltaTime);
     }
 
 
