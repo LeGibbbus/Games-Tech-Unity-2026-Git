@@ -7,6 +7,7 @@ public class Player_Manager : MonoBehaviour
 {
     [SerializeField] float MoveSpeed = 0f;
     DefaultInputActions player_Inputs;
+    InputAction moveAction;
 
     Rigidbody2D body;
 
@@ -14,7 +15,9 @@ public class Player_Manager : MonoBehaviour
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
-        player_Inputs = new DefaultInputActions();;
+        player_Inputs = new DefaultInputActions();
+        moveAction = player_Inputs.Player.Move;
+
     }
 
     // Update is called once per frame
