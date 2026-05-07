@@ -7,7 +7,7 @@ public class Player_Manager : MonoBehaviour
 {
     [SerializeField] float MoveSpeed = 5f;
     [SerializeField] InputAction moveDown;
-    DefaultInputActions player_Inputs;
+    DefaultInputActions playerInputs;
     InputAction moveAction;
 
     Rigidbody2D body;
@@ -16,8 +16,8 @@ public class Player_Manager : MonoBehaviour
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
-        player_Inputs = new DefaultInputActions();
-        moveAction = player_Inputs.Player.Move;
+        playerInputs = new DefaultInputActions();
+        moveAction = playerInputs.Player.Move;
         Vector2 movementDirection = Vector2.zero;
 
     }
@@ -27,16 +27,17 @@ public class Player_Manager : MonoBehaviour
     private void OnEnable()
     {
         moveDown.Enable();
-        player_Inputs.Player.Enable();
+        playerInputs.Player.Enable();
+        playerInputs.Player.Move.Enable();
     }
 
-    private void OnDisable()
-    {
-        player_Inputs.Player.Disable();
-    }
+    //private void OnDisable()
+    //{
+        //playerInputs.Player.Disable();
+    //}
     void Update()
     {
-        if (player_Inputs.Player.Move.triggered)
+        if (moveAction.triggered)
         {
             Debug.Log("Moved");
         }
