@@ -20,12 +20,12 @@ public class Player_Manager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        GameObject.
+        
     }
 
     void MovePlayer()
     {
-
+        Vector2 PlayerPosition = transform.position; //sets Vector 2 current position to that of the player object
     }
 
 
