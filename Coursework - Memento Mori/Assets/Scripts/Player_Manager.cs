@@ -6,7 +6,7 @@ using UnityEngine.UIElements;
 public class Player_Manager : MonoBehaviour
 {
     [SerializeField] float MoveSpeed = 0f;
-    InputSystem_Actions player_inputs;
+    DefaultInputActions player_Inputs;
 
     Rigidbody2D body;
 
@@ -14,20 +14,19 @@ public class Player_Manager : MonoBehaviour
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
-        playerInputs = new DefaultInputActions();
-        playerAction = playerInputs.Player.Interact;
+        player_Inputs = new DefaultInputActions();;
     }
 
     // Update is called once per frame
 
     private void OnEnable()
     {
-        playerInputs.Player.Enable();
+        player_Inputs.Player.Enable();
     }
 
     private void OnDisable()
     {
-        playerInputs.Player.Disable();
+        player_Inputs.Player.Disable();
     }
     void Update()
     {
