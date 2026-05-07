@@ -34,8 +34,6 @@ public class Player_Manager : MonoBehaviour
     void Update()
     {
         MovePlayer();
-
-        if (interactAction.triggered) ;
     }
 
     void MovePlayer()
