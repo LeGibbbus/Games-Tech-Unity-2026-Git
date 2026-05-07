@@ -17,6 +17,7 @@ public class Player_Manager : MonoBehaviour
         body = GetComponent<Rigidbody2D>();
         player_Inputs = new DefaultInputActions();
         moveAction = player_Inputs.Player.Move;
+        Vector2 movementDirection = Vector2.zero;
 
     }
 
@@ -34,10 +35,18 @@ public class Player_Manager : MonoBehaviour
     void Update()
     {
         MovePlayer();
+        Vector2 movement = Vector2.zero;
+        if (Input.GetKey(KeyCode.DownArrow))
+        {
+            movement += Vector2.down;
+        }
+        Vector2 velocity = movement.normalized * MoveSpeed;
+        body.linearVelocity = velocity;
     }
 
     void MovePlayer()
     {
+        
         Vector2 moveDirection = moveAction.ReadValue<Vector2>();
         body.MovePosition(body.position + moveDirection * MoveSpeed *  Time.deltaTime);
     }
