@@ -5,7 +5,7 @@ using UnityEngine.UIElements;
 
 public class Player_Manager : MonoBehaviour
 {
-    [SerializeField] float MoveSpeed = 0f;
+    [SerializeField] float MoveSpeed = 5f;
     DefaultInputActions player_Inputs;
     InputAction moveAction;
 
@@ -38,7 +38,8 @@ public class Player_Manager : MonoBehaviour
 
     void MovePlayer()
     {
-        Vector2 PlayerPosition = transform.position; //sets Vector 2 current position to that of the player object
+        Vector2 moveDirection = moveAction.ReadValue<Vector2>();
+        body.MovePosition(body.position + moveDirection * MoveSpeed *  Time.deltaTime);
     }
 
 
