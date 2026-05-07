@@ -6,6 +6,7 @@ using UnityEngine.UIElements;
 public class Player_Manager : MonoBehaviour
 {
     [SerializeField] float MoveSpeed = 5f;
+    [SerializeField] InputAction moveDown;
     DefaultInputActions player_Inputs;
     InputAction moveAction;
 
@@ -25,6 +26,7 @@ public class Player_Manager : MonoBehaviour
 
     private void OnEnable()
     {
+        moveDown.Enable();
         player_Inputs.Player.Enable();
     }
 
@@ -34,14 +36,10 @@ public class Player_Manager : MonoBehaviour
     }
     void Update()
     {
-        MovePlayer();
-        Vector2 movement = Vector2.zero;
-        if (Input.GetKey(KeyCode.DownArrow))
+        if (player_Inputs.Player.Move.triggered)
         {
-            movement += Vector2.down;
+            Debug.Log("Moved");
         }
-        Vector2 velocity = movement.normalized * MoveSpeed;
-        body.linearVelocity = velocity;
     }
 
     void MovePlayer()
