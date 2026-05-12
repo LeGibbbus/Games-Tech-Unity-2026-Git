@@ -28,10 +28,10 @@ public class Player_Manager : MonoBehaviour
        // playerInputs.Player.Enable();
     //}
 
-    private void OnDisable()
-    {
-        playerInputs.Player.Disable();
-    }
+    //private void OnDisable()
+    //{
+        //playerInputs.Player.Disable();
+    //}
     void Update()
     {
         Move();
