@@ -14,6 +14,7 @@ public class Player_Manager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        playerInputs.Player.Enable();
         playerInputs = new DefaultInputActions();
         moveAction = playerInputs.Player.Move;
         body = GetComponent<Rigidbody2D>();
@@ -22,10 +23,10 @@ public class Player_Manager : MonoBehaviour
 
     // Update is called once per frame
 
-    private void OnEnable()
-    {
-        playerInputs.Player.Enable();
-    }
+    //private void OnEnable()
+    //{
+       // playerInputs.Player.Enable();
+    //}
 
     private void OnDisable()
     {
