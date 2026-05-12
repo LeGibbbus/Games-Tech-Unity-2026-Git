@@ -39,7 +39,7 @@ public class Player_Manager : MonoBehaviour
     private void Move()
     {
         Vector2 moveDirection = moveAction.ReadValue<Vector2>();
-        body.MovePosition(body.position + moveDirection * MoveSpeed *Time.deltaTime);
+        body.MovePosition(body.position + moveDirection * MoveSpeed);
     }
 
 
