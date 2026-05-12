@@ -14,9 +14,9 @@ public class Player_Manager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        body = GetComponent<Rigidbody2D>();
         playerInputs = new DefaultInputActions();
         moveAction = playerInputs.Player.Move;
+        body = GetComponent<Rigidbody2D>();
 
     }
 
