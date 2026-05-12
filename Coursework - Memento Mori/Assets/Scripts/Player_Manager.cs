@@ -25,7 +25,6 @@ public class Player_Manager : MonoBehaviour
     private void OnEnable()
     {
         playerInputs.Player.Enable();
-        playerInputs.Player.Move.Enable();
     }
 
     //private void OnDisable()
