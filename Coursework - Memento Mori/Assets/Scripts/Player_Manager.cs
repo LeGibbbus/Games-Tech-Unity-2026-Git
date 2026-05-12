@@ -36,7 +36,13 @@ public class Player_Manager : MonoBehaviour
     //}
     void Update()
     {
+        Move();
+    }
 
+    private void Move()
+    {
+        Vector2 moveDirection = moveAction.ReadValue<Vector2>();
+        body.MovePosition(body.position + moveDirection * MoveSpeed *Time.deltaTime);
     }
 
 
