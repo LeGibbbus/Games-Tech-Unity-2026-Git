@@ -6,7 +6,6 @@ using UnityEngine.UIElements;
 public class Player_Manager : MonoBehaviour
 {
     [SerializeField] float MoveSpeed = 5f;
-    [SerializeField] InputAction moveDown;
     DefaultInputActions playerInputs;
     InputAction moveAction;
 
@@ -25,7 +24,6 @@ public class Player_Manager : MonoBehaviour
 
     private void OnEnable()
     {
-        moveDown.Enable();
         playerInputs.Player.Enable();
         playerInputs.Player.Move.Enable();
     }
