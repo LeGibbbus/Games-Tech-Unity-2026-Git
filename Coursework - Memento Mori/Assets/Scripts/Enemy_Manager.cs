@@ -22,6 +22,6 @@ public class Enemy_Manager : MonoBehaviour
     private void Move()
     {
         Vector2 moveDirection = moveAction.ReadValue<Vector2>();
-        body.MovePosition(body.position + moveDirection * MoveSpeed);
+        enemyBody.MovePosition(enemyBody.position + moveDirection * moveSpeed);
     }
 }
