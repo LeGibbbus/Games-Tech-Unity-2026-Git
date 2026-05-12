@@ -22,10 +22,10 @@ public class Player_Manager : MonoBehaviour
 
     // Update is called once per frame
 
-    private void OnEnable()
-    {
-        playerInputs.Player.Enable();
-    }
+    //private void OnEnable()
+    //{
+    //    playerInputs.Player.Enable();
+    //}
 
     //private void OnDisable()
     //{
