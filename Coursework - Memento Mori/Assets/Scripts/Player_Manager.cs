@@ -5,7 +5,7 @@ using UnityEngine.UIElements;
 
 public class Player_Manager : MonoBehaviour
 {
-    [SerializeField] float MoveSpeed = 50f;
+    [SerializeField] float MoveSpeed = 5f;
     DefaultInputActions playerInputs;
     InputAction moveAction;
 
