@@ -6,6 +6,7 @@ public class Enemy_Manager : MonoBehaviour
 
     [SerializeField] float moveSpeed = 0.1f;
     Rigidbody2D enemyBody;
+    GameObject player;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
