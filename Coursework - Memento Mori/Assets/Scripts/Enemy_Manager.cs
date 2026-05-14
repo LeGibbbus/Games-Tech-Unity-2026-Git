@@ -24,6 +24,6 @@ public class Enemy_Manager : MonoBehaviour
     private void Move()
     {
         GameObject player = GameObject.Find("Player");
-        transform.position = Vector3.MoveTowards(transform.position, player.transform.position, .3f);
+        transform.position = Vector3.MoveTowards(transform.position, player.transform.position, moveSpeed);
     }
 }
