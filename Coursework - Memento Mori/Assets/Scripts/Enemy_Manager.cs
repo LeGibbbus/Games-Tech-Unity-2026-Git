@@ -6,12 +6,12 @@ public class Enemy_Manager : MonoBehaviour
 
     [SerializeField] float moveSpeed = 0.1f;
     Rigidbody2D enemyBody;
-    GameObject player;
+    //GameObject player;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        GameObject player = GameObject.Find("Player");
+        //GameObject player = GameObject.Find("Player");
         enemyBody = GetComponent<Rigidbody2D>();
     }
 
@@ -23,6 +23,7 @@ public class Enemy_Manager : MonoBehaviour
 
     private void Move()
     {
+        GameObject player = GameObject.Find("Player");
         transform.position = Vector3.MoveTowards(transform.position, player.transform.position, 3);
     }
 }
